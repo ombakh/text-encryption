@@ -1,10 +1,14 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Default issue template
+about: Goto template when creating issues
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
+Description:
 
+Done when:
+
+[ ]
