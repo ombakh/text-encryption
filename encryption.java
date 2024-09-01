@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+import java.util.Scanner; //import statement for scanner; scanner is required to get users text
 
 public class encryption {
     void getText() {
