@@ -2,11 +2,8 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String args[]) {
-        Scanner scan = new Scanner(System.in); // creating the scanner as a variable
-        System.out.println("Enter your text: ");
-        String inputText = scan.nextLine(); // scans next line entered by user
-                                            // and assigns it to variable inputText
-
+        // majority of code is not written here; reserved for running other classes.
+        // currently, code should be written in encryption.java
 
     }
 }
