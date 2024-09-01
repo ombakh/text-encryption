@@ -1,6 +1,6 @@
 import java.util.Scanner; //import statement for scanner; scanner is required to get users text
 
-public class encryption {
+public class UserInput {
     void getText() {
         Scanner scan = new Scanner(System.in); // creating the scanner as a variable
         System.out.print("Enter your text: ");
@@ -14,8 +14,4 @@ public class encryption {
         System.out.println("What is your key?: ");
         String key = scan.next();
     }
-    void encryption() {
-
-    }
-
 }
