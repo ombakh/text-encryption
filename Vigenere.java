@@ -1,15 +1,16 @@
+import java.util.Scanner;
 public class Vigenere {
-    public static void main(String[] args){
-  int[][] encryptArray = new int[2][35];
+  public static void main(String[] args){
+    int[][] encryptArray = new int[2][35];
 
   public void arrayFiller() {
     Scanner scanner = new Scanner(System.in);
-
+    UserInput userInput = new UserInput();
     for(int i = 0; i < 35; i++){
-      encryptArray[0][i] = userInput[i]
+      encryptArray[0][i] = userInput[i];
     }
     for (int i = 0; i < 35; ++i){
-      array[1][i] = key[i];
+      encryptArray[1][i] = key[i];
     }
 
   }
@@ -21,11 +22,6 @@ public class Vigenere {
       }
       System.out.println();
     }
-  }
-  public static void main(String[] args) {
-    UserInput userInput = new UserInput();
-    String example = userInput.getText();
-    System.out.println(example);
   }
  }
 }
