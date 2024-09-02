@@ -1,19 +1,20 @@
-import java.util.Scanner; //import statement for scanner; scanner is required to get users text
 import java.util.Random;
+import java.util.Scanner;
 
 public class UserInput {
-    void getText() {
-        Scanner scan = new Scanner(System.in); // creating the scanner as a variable
+
+    String getText() {
+        Scanner scan = new Scanner(System.in);
         System.out.print("Enter your text: ");
-        String inputText = scan.next(); // scans next line entered by user
-        // and assigns it to variable inputText
+        String inputText = scan.next(); // Scans next word entered by user
         System.out.println(inputText);
+        return inputText;
     }
 
-    StringBuilder keyGenerator() {
+    StringBuilder keyGenerator(String inputText) {
         Random random = new Random();
 
-        int keyLength = random.nextInt(15, 26);
+        int keyLength = inputText.length(); // Get the length of inputText
         StringBuilder key = new StringBuilder();
         for(int i = 0; i < keyLength; i++) {
 
@@ -27,5 +28,13 @@ public class UserInput {
         }
 
         return key;
+    }
+
+    public static void main(String[] args) {
+        UserInput userInput = new UserInput();
+        String text = userInput.getText(); // Get the user's input text
+        StringBuilder generatedKey = userInput.keyGenerator(text); // Pass the input text to keyGenerator
+
+        System.out.println("Generated key: " + generatedKey);
     }
 }

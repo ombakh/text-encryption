@@ -4,7 +4,8 @@ public class Main {
         // majority of code is not written here; reserved for running other classes.
         // currently, code should be written in encryption.java
         UserInput userInput = new UserInput();
-        System.out.println(userInput.keyGenerator());
+        userInput.getText();
+        System.out.println(userInput);
 
     }
 
