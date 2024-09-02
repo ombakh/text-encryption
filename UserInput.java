@@ -10,14 +10,18 @@ public class UserInput {
         System.out.println(inputText);
     }
 
-    String keyGenerator() {
+    StringBuilder keyGenerator() {
         Random random = new Random();
-        int keyLength = random.nextInt(10, 26);
-        int randomIndex = random.nextInt(26);
-        char randomChar = (char) ('A' + randomIndex);
-        String key;
 
+        int keyLength = random.nextInt(15, 26);
+        StringBuilder key = new StringBuilder();
+        for(int i = 0; i < keyLength; i++) {
 
-        return null;
+            int randomIndex = random.nextInt(26);
+            char randomChar = (char) ('A' + randomIndex);
+            key.append(randomChar);
+        }
+
+        return key;
     }
 }
