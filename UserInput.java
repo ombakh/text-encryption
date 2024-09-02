@@ -19,6 +19,10 @@ public class UserInput {
 
             int randomIndex = random.nextInt(26);
             char randomChar = (char) ('A' + randomIndex);
+            if (random.nextBoolean()) {
+                randomChar = Character.toLowerCase(randomChar);
+            }
+
             key.append(randomChar);
         }
 
