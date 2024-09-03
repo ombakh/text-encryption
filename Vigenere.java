@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 
-public class Vigenere {
+
     public class Vigenere {
         char[][] encryptArray = new char[2][35];
 
@@ -12,7 +12,7 @@ public class Vigenere {
     }
 
         public void arrayFiller() {
-            Scanner scanner + new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
             UserInput userInput = new UserInput();
 
             String text = userInput.getText();  //get user input text
@@ -22,7 +22,7 @@ public class Vigenere {
                 if(i  < text.length()){
                     encryptArray[0][i] = text.charAt(i);    //fill first row with user input text
                 } else {
-                    encryptArray[0][i] ='';  //fill remaining spaces with space character
+                    encryptArray[0][i] =' ';  //fill remaining spaces with space character
                 }
             }
 
@@ -47,9 +47,10 @@ public class Vigenere {
 
 
     public class HashMapGenerator {
-        public static void main(String[] args){
-            HashMap<Character, public void> alphabetMap = new HashMap<>();
+        public static void main(String[] args) {
+            HashMap < Character,public void> alphabetMap = new HashMap<>();
             //need to figure out how to fill this map based on ASCII values and Vigenere cipher rules!!
 
 
         }
+    }

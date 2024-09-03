@@ -5,7 +5,7 @@ public class Main {
         // currently, code should be written in encryption.java
         UserInput userInput = new UserInput();
         userInput.getText();
-        System.out.println(userInput);
+        System.out.println("User input: " + userInput);
 
     }
 
