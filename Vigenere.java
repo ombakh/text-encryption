@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Vigenere {
     public class Vigenere {
@@ -37,9 +38,18 @@ public class Vigenere {
         public void printArray(char[][] encryptArray){
             for(int i = 0; i<encryptArray.length; i++){
                 for(int j = 0; j < encryptArray[i].length; j++){
-                    System.out.print(encryptArray[i][j] + " ");
+                    System.out.print(encryptArray[i][j] + " "); //print array elements for debugging purposes
                 }
                 System.out.println();
             }
         }
     }
+
+
+    public class HashMapGenerator {
+        public static void main(String[] args){
+            HashMap<Character, public void> alphabetMap = new HashMap<>();
+            //need to figure out how to fill this map based on ASCII values and Vigenere cipher rules!!
+
+
+        }
