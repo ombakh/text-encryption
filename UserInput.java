@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,8 +7,7 @@ public class UserInput {
     String getText() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter your text: ");
-        String inputText = scan.next(); // Scans next word entered by user
-        System.out.println(inputText);
+        String inputText = scan.nextLine(); // Use nextLine to capture the entire input
         return inputText;
     }
 
@@ -16,7 +16,7 @@ public class UserInput {
 
         int keyLength = inputText.length(); // Get the length of inputText
         StringBuilder key = new StringBuilder();
-        for(int i = 0; i < keyLength; i++) {
+        for (int i = 0; i < keyLength; i++) {
 
             int randomIndex = random.nextInt(26);
             char randomChar = (char) ('A' + randomIndex);
@@ -30,11 +30,28 @@ public class UserInput {
         return key;
     }
 
+    StringBuilder encryptText(String inputText) {
+        HashMap<Character, Integer> alphabetMap = Encryptor.getAlphabetMap();
+        StringBuilder encryptedText = new StringBuilder();
+
+        for (char ch : inputText.toCharArray()) {
+            if (alphabetMap.containsKey(ch)) {
+                encryptedText.append(alphabetMap.get(ch)).append(" ");
+            } else {
+                encryptedText.append(ch).append(" ");
+            }
+        }
+
+        return encryptedText;
+    }
+
     public static void main(String[] args) {
         UserInput userInput = new UserInput();
         String text = userInput.getText(); // Get the user's input text
-        StringBuilder generatedKey = userInput.keyGenerator(text); // Pass the input text to keyGenerator
+        StringBuilder generatedKey = userInput.keyGenerator(text); // Generate a key
 
+        StringBuilder encryptedText = userInput.encryptText(text); // Encrypt the input text
         System.out.println("Generated key: " + generatedKey);
+        System.out.println("Encrypted text: " + encryptedText);
     }
 }
