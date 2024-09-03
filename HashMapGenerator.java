@@ -1,6 +1,9 @@
+import java.util.HashMap;
+import java.util.HashMap;
+
 public class HashMapGenerator {
-        public static void main(String[] args) {
-            HashMap<char, int> public void alphabetMap = new HashMap<>();
+    public static void main(String[] args) {
+        HashMap<Character, Integer> alphabetMap = new HashMap<>();
 
             alphabetMap.put('a', 1);
             alphabetMap.put('b', 2);
