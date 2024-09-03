@@ -1,7 +1,7 @@
 import java.util.HashMap;
-import java.util.HashMap;
 
 public class HashMapGenerator {
+
     public static void main(String[] args) {
         HashMap<Character, Integer> alphabetMap = new HashMap<>();
 

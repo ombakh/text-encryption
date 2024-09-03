@@ -8,7 +8,7 @@ import java.util.HashMap;
             Vigenere vigenere = new Vigenere();
             vigenere.arrayFiller(); //fill the array with user input and key
             vigenere.printArray(vigenere.encryptArray); //print the filled array (debugging purposes)
-            vigenere.applyVigenereCipher(); //apply Vigenere cipher
+            //vigenere.applyVigenereCipher(); //apply Vigenere cipher
         }
 
         public void arrayFiller() {
