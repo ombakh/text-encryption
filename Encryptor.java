@@ -16,8 +16,15 @@ public class Encryptor {
 
         // Special characters (if needed)
         char[] specialChars = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '?'};
+        int specialCharsValue = 53;  // Start assigning special characters from 28 onwards
         for (char ch : specialChars) {
-            alphabetMap.put(ch, 1);  // Special characters still map to 1
+            alphabetMap.put(ch, specialCharValue++);  // Special characters still map to 1
+        }
+        
+        // Numbers (if needed)
+        char[] numbers = {'0', '1', '2', '3','4', '5', '6', '7', '8', '9'};
+        for(char ch : numbers){
+            alphabetMap.put(ch, specialCharValue++);  // Numbers still map to 27
         }
     }
 
@@ -27,5 +34,6 @@ public class Encryptor {
 
     public static void main(String[] args) {
         System.out.println("Encryptor is ready.");
+        System.out.println("Alphabet Map: " + getAlphabetMap());
     }
 }
