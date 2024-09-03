@@ -2,7 +2,6 @@ public class HashMapGenerator {
         public static void main(String[] args) {
             HashMap<char, int> public void alphabetMap = new HashMap<>();
 
-
             alphabetMap.put('a', 1);
             alphabetMap.put('b', 2);
             alphabetMap.put('c', 3);
@@ -55,9 +54,17 @@ public class HashMapGenerator {
             alphabetMap.put('X', 48);
             alphabetMap.put('Y', 50);
             alphabetMap.put('Z', 52);
-
-
-
+            // alphabetMap.put('!', 1);
+            // alphabetMap.put('@', 1);
+            // alphabetMap.put('#', 1);
+            // alphabetMap.put('$', 1);
+            // alphabetMap.put('%', 1);
+            // alphabetMap.put('^', 1);
+            // alphabetMap.put('&', 1);
+            // alphabetMap.put('*', 1);
+            // alphabetMap.put('(', 1);
+            // alphabetMap.put(')', 1);
+            // alphabetMap.put('?', 1);
 
         }
     }
