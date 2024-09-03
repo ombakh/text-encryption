@@ -11,13 +11,13 @@ public class Encryptor {
 
         // Uppercase letters
         for (char ch = 'A'; ch <= 'Z'; ch++) {
-            alphabetMap.put(ch, (ch - 'A' + 1) * 2);
+            alphabetMap.put(ch, ch - 'A' + 27);  // Assign a different range for uppercase letters
         }
 
         // Special characters (if needed)
         char[] specialChars = {'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '?'};
         for (char ch : specialChars) {
-            alphabetMap.put(ch, 1);
+            alphabetMap.put(ch, 1);  // Special characters still map to 1
         }
     }
 
