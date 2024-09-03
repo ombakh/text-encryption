@@ -45,6 +45,6 @@ import java.util.HashMap;
         }
     }
 
-        public void applyVigenereCipher(){
-            alphabetMap = new HashMap<>();
-            
+        // public void applyVigenereCipher(){
+        //     alphabetMap = new HashMap<>();
+
