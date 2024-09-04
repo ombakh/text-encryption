@@ -1,6 +1,8 @@
 // Derrek and Anthony's Blowfish Script :)
 // 9/3/2024
 
+package algorithm;
+
 // Public Class BLOWFISH
 public class Blowfish {
 
@@ -97,7 +99,13 @@ public class Blowfish {
     
     // AC ~ MAIN FUNCTION (CHANGE IF YOU WANT IDC IT WAS JUST AN ERROR)
     public static void main(String[] args) {
-        
+        // tests for the functions
+
+        System.out.println(HexToBin("abc"));
+
+        // assert HexToBin("abc") == "101010111100";
+        // assert BinToHex("1010101111001111") == "abc";
+        // assert StrToHex("test") == "74657374" ;
     }
 }
 

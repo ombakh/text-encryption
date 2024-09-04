@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.Scanner;
 import java.util.HashMap;
 
