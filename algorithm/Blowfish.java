@@ -1,8 +1,6 @@
 // Derrek and Anthony's Blowfish Script :)
 // 9/3/2024
 
-package algorithm;
-
 // Public Class BLOWFISH
 public class Blowfish {
 
@@ -35,7 +33,7 @@ public class Blowfish {
             tempStr.append(
                 Integer.toBinaryString(
                     Integer.parseInt(
-                        String.valueOf(ch), 10)));
+                        String.valueOf(ch), 16)));
             
 
             // Add leading 0s
@@ -60,9 +58,9 @@ public class Blowfish {
         String tempStr = "";
 
         // takes 4 digits at a time and make it hexadecimal, adds it to "result"
-        for (int i = 0; i < input.length(); i = i + 4) {
+        for (int i = 0; i < input.length(); i+=4) {
             tempStr = input.substring(i, i + 4);
-            result.append(Integer.toHexString(Integer.parseInt(tempStr)));
+            result.append(Integer.toHexString(Integer.parseInt(tempStr, 2)));
             tempStr = "";
         }
 
@@ -101,11 +99,16 @@ public class Blowfish {
     public static void main(String[] args) {
         // tests for the functions
 
-        System.out.println(HexToBin("abc"));
+        assert HexToBin("abc").equals("101010111100");
+        assert BinToHex("101010111100").equals("abc");
+        assert StrToHex("test").equals("74657374");
 
-        // assert HexToBin("abc") == "101010111100";
-        // assert BinToHex("1010101111001111") == "abc";
-        // assert StrToHex("test") == "74657374" ;
+        // For Anthony's xOr function
+
+        /*
+        assert xOr("1001", "0111").equals("1110");
+        assert xOr("0101", "1000").equals("1101");
+        */
     }
 }
 
