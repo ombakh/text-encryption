@@ -61,6 +61,7 @@ public class Blowfish {
         for (int i = 0; i < input.length(); i = i + 4) {
             tempStr = input.substring(i, i + 4);
             result.append(Integer.toHexString(Integer.parseInt(tempStr)));
+            tempStr = "";
         }
 
         return result.toString();
