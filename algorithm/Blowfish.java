@@ -90,6 +90,24 @@ public class Blowfish {
         return result.toString();
     }
 
+    // addition modulo 2^32 that takes 2 binary and returns binary
+    static String addMod(String lhs, String rhs) {
+        StringBuilder result = new StringBuilder();
+        result.append(Integer.toBinaryString(
+            (Integer.parseInt(lhs, 2) 
+                + Integer.parseInt(rhs, 2))
+                    % 2^32).toString());
+
+        int n = lhs.length();
+        int i = result.length();
+        while (i < n) {
+            result.insert(0, '0');
+            ++i;
+        }
+
+        return result.toString();
+    }
+
     // AC ~ MAIN FUNCTION (CHANGE IF YOU WANT IDC IT WAS JUST AN ERROR)
     public static void main(String[] args) {
         String S[][]
@@ -303,10 +321,12 @@ public class Blowfish {
               "3ac372e6" } };
  
     // Subkeys initialisation with digits of pi.
-            String P[] 
+        String P[] 
             = { "243f6a88", "85a308d3", "13198a2e", "03707344", "a4093822",
                 "299f31d0", "082efa98", "ec4e6c89", "452821e6", "38d01377",
                 "be5466cf", "34e90c6c", "c0ac29b7", "c97c50dd", "3f84d5b5",
                 "b5470917", "9216d5d9", "8979fb1b" };
+
+        System.out.println(addMod("11101110", "00011101"));
     }
 }
